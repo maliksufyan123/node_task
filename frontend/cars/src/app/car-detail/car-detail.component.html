@@ -1,0 +1,9 @@
+<h1>Car Detail</h1>
+<div *ngIf="car">
+    <img [src]="car.image" alt="car Image">
+    <h4>Name:{{car.name }}</h4>
+    <h4>Mileage: {{ car.mileage }}</h4> 
+    <h4>Quarter Value: {{ car.quarter }}</h4>
+    <h4>HorsePower: {{ car.hp }}</h4>
+</div>
+<button (click)="goBack()">go back</button>

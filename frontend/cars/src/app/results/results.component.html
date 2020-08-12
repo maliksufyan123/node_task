@@ -1,0 +1,15 @@
+<section *ngIf="result">
+  <accordion>
+    <accordion-group *ngFor="let quarter of quarterOptions" [heading]="quarter"
+    [isOpen]="selectedQuarter===quarter">
+      <div class="car-card" *ngFor="let car of result[quarter]">
+        <img [src]="car.image" alt="car Image">
+        <a routerLink='/detail/{{car._id}}'><h4>{{ car.name }}</h4></a>
+      </div>
+    </accordion-group>
+  </accordion>
+</section>
+<section *ngIf="!result">
+  <p style="text-align: center">No Result 😕</p>
+</section>
+
